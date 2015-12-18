@@ -1,0 +1,11 @@
+{
+  "name": "discovery_react",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/geniuxconsulting/react-native-ibeacon.git"
+  },
+  "license": "MIT",
+  "keywords": ["react-native", "react-component", "ios", "ibeacon", "beacon", "dicovery"],
+  "main": "DiscoveryReact.ios.js"
+}

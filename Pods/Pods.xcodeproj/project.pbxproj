@@ -1,0 +1,460 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A4C8F98A50B624D24B2EDCDAC2C4A27 /* EasedValue.h in Headers */ = {isa = PBXBuildFile; fileRef = B3EA7E071D1F411CCB3438A11ED24549 /* EasedValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		16EFC600060DEE2D5FC31D2385E5318F /* Pods-DiscoveryReact-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CD325C06E584BB4D00B6FD53118E263A /* Pods-DiscoveryReact-dummy.m */; };
+		1F95B374E0973953C31751156DDDB3AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1196347D56715430B50C390042693560 /* Foundation.framework */; };
+		2D2B570C2801CF2ACCABA0EA2F9F2014 /* Discovery-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F2D3D9C433961707487E3456CE16A46 /* Discovery-dummy.m */; };
+		4171BD2114DC8F1E71F4C72658958F4C /* BLEUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 37E151E7FCF3F416CCA50C06F28647BA /* BLEUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B9DE2A2317038D9C7760C91D5EFA641 /* Discovery.h in Headers */ = {isa = PBXBuildFile; fileRef = 49AC963B8F38C8362DBB9E14D9EB1BFA /* Discovery.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		89DC5A10CE650BDDBE4222391457CD3A /* Discovery.m in Sources */ = {isa = PBXBuildFile; fileRef = 1695EE880BBCE96A8E2B546E90124727 /* Discovery.m */; };
+		93441883E11946255954D926ECA7CEF8 /* EasedValue.m in Sources */ = {isa = PBXBuildFile; fileRef = F95B14C766F88BC1C726A2FC5F1775DF /* EasedValue.m */; };
+		992391AA2A48CD051E9BB3D08A949767 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E3260FEB8339D84EBAB3664565A6DC3 /* CoreBluetooth.framework */; };
+		ABE2619431CC774DAEAEAD4A7687FB42 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB6E8A081C129CC0C975B39FF9DD71C1 /* CoreLocation.framework */; };
+		DC00984F27AE2AAC022DD05A1C54D55F /* BLEUser.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8B2EEE61FD4EF72FBBA6A712F04504 /* BLEUser.m */; };
+		DFDA21C8F63EBFF8BAA7D388C6C4A45F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1196347D56715430B50C390042693560 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F66AF912BCAE81E350227F048274A6B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5D916D2B8C8B51883F4DF18694A1748;
+			remoteInfo = Discovery;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1196347D56715430B50C390042693560 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		1695EE880BBCE96A8E2B546E90124727 /* Discovery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Discovery.m; path = Discovery/Discovery.m; sourceTree = "<group>"; };
+		1FF1C073CE3DAC11DA37E8A439F38F9C /* Discovery.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Discovery.xcconfig; sourceTree = "<group>"; };
+		37E151E7FCF3F416CCA50C06F28647BA /* BLEUser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BLEUser.h; path = Discovery/BLEUser.h; sourceTree = "<group>"; };
+		3F2D3D9C433961707487E3456CE16A46 /* Discovery-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Discovery-dummy.m"; sourceTree = "<group>"; };
+		49AC963B8F38C8362DBB9E14D9EB1BFA /* Discovery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Discovery.h; path = Discovery/Discovery.h; sourceTree = "<group>"; };
+		5B4544FA325D9896DB91B200B72E12F0 /* Pods-DiscoveryReact-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DiscoveryReact-frameworks.sh"; sourceTree = "<group>"; };
+		5DC5B89A1956428659CC65FE94CF94DA /* Pods-DiscoveryReact-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DiscoveryReact-acknowledgements.plist"; sourceTree = "<group>"; };
+		5E3260FEB8339D84EBAB3664565A6DC3 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreBluetooth.framework; sourceTree = DEVELOPER_DIR; };
+		5FB15EE9C943FC322B9554185ACA0A68 /* Pods-DiscoveryReact-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DiscoveryReact-acknowledgements.markdown"; sourceTree = "<group>"; };
+		837DB8948572F0A1729EC4064E873B9E /* libDiscovery.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDiscovery.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F59A37A6385158732C9D7DD532240E8 /* libPods-DiscoveryReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DiscoveryReact.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD8B2EEE61FD4EF72FBBA6A712F04504 /* BLEUser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BLEUser.m; path = Discovery/BLEUser.m; sourceTree = "<group>"; };
+		B3EA7E071D1F411CCB3438A11ED24549 /* EasedValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EasedValue.h; path = Discovery/EasedValue.h; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BAFF65FFABB43B8ADB490A8D3A5D7686 /* Pods-DiscoveryReact-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DiscoveryReact-resources.sh"; sourceTree = "<group>"; };
+		C15BE010B8CA2A3F6926CE1240D3C947 /* Discovery-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Discovery-prefix.pch"; sourceTree = "<group>"; };
+		CD325C06E584BB4D00B6FD53118E263A /* Pods-DiscoveryReact-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DiscoveryReact-dummy.m"; sourceTree = "<group>"; };
+		D725634982BF1C744AB69DAC18782FCB /* Pods-DiscoveryReact.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DiscoveryReact.debug.xcconfig"; sourceTree = "<group>"; };
+		DB6E8A081C129CC0C975B39FF9DD71C1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+		ED532CB191544403EEECF260E3EEDADD /* Pods-DiscoveryReact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DiscoveryReact.release.xcconfig"; sourceTree = "<group>"; };
+		F95B14C766F88BC1C726A2FC5F1775DF /* EasedValue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EasedValue.m; path = Discovery/EasedValue.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		31141AB913BFB99C13D4025AB3CDCB24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				992391AA2A48CD051E9BB3D08A949767 /* CoreBluetooth.framework in Frameworks */,
+				ABE2619431CC774DAEAEAD4A7687FB42 /* CoreLocation.framework in Frameworks */,
+				DFDA21C8F63EBFF8BAA7D388C6C4A45F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB26F75D17706D67334FCF55EF0535EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F95B374E0973953C31751156DDDB3AD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0B012EB8F2B860FD2ADED4842891A2A0 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8302B52BD47A417C3EDCC963F4A177D8 /* Pods-DiscoveryReact */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		11D20AB05BB3375BD59B390AB5674AB9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				837DB8948572F0A1729EC4064E873B9E /* libDiscovery.a */,
+				8F59A37A6385158732C9D7DD532240E8 /* libPods-DiscoveryReact.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6381FA3F779BD38AA344A26DA2B3272D /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		276BC6ABDA163E496F95DADE17660456 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A2D897FCE2A737F9279465A8DBE878F5 /* Discovery */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3524307AF647DFFB2A4A0A36BC88C1FA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1FF1C073CE3DAC11DA37E8A439F38F9C /* Discovery.xcconfig */,
+				3F2D3D9C433961707487E3456CE16A46 /* Discovery-dummy.m */,
+				C15BE010B8CA2A3F6926CE1240D3C947 /* Discovery-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Discovery";
+			sourceTree = "<group>";
+		};
+		6381FA3F779BD38AA344A26DA2B3272D /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5E3260FEB8339D84EBAB3664565A6DC3 /* CoreBluetooth.framework */,
+				DB6E8A081C129CC0C975B39FF9DD71C1 /* CoreLocation.framework */,
+				1196347D56715430B50C390042693560 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				276BC6ABDA163E496F95DADE17660456 /* Pods */,
+				11D20AB05BB3375BD59B390AB5674AB9 /* Products */,
+				0B012EB8F2B860FD2ADED4842891A2A0 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8302B52BD47A417C3EDCC963F4A177D8 /* Pods-DiscoveryReact */ = {
+			isa = PBXGroup;
+			children = (
+				5FB15EE9C943FC322B9554185ACA0A68 /* Pods-DiscoveryReact-acknowledgements.markdown */,
+				5DC5B89A1956428659CC65FE94CF94DA /* Pods-DiscoveryReact-acknowledgements.plist */,
+				CD325C06E584BB4D00B6FD53118E263A /* Pods-DiscoveryReact-dummy.m */,
+				5B4544FA325D9896DB91B200B72E12F0 /* Pods-DiscoveryReact-frameworks.sh */,
+				BAFF65FFABB43B8ADB490A8D3A5D7686 /* Pods-DiscoveryReact-resources.sh */,
+				D725634982BF1C744AB69DAC18782FCB /* Pods-DiscoveryReact.debug.xcconfig */,
+				ED532CB191544403EEECF260E3EEDADD /* Pods-DiscoveryReact.release.xcconfig */,
+			);
+			name = "Pods-DiscoveryReact";
+			path = "Target Support Files/Pods-DiscoveryReact";
+			sourceTree = "<group>";
+		};
+		A2D897FCE2A737F9279465A8DBE878F5 /* Discovery */ = {
+			isa = PBXGroup;
+			children = (
+				37E151E7FCF3F416CCA50C06F28647BA /* BLEUser.h */,
+				AD8B2EEE61FD4EF72FBBA6A712F04504 /* BLEUser.m */,
+				49AC963B8F38C8362DBB9E14D9EB1BFA /* Discovery.h */,
+				1695EE880BBCE96A8E2B546E90124727 /* Discovery.m */,
+				B3EA7E071D1F411CCB3438A11ED24549 /* EasedValue.h */,
+				F95B14C766F88BC1C726A2FC5F1775DF /* EasedValue.m */,
+				3524307AF647DFFB2A4A0A36BC88C1FA /* Support Files */,
+			);
+			path = Discovery;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3C30AA0690436AE9D0166ABEBF08D723 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4171BD2114DC8F1E71F4C72658958F4C /* BLEUser.h in Headers */,
+				4B9DE2A2317038D9C7760C91D5EFA641 /* Discovery.h in Headers */,
+				0A4C8F98A50B624D24B2EDCDAC2C4A27 /* EasedValue.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A5D916D2B8C8B51883F4DF18694A1748 /* Discovery */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A72EA6F4271FC1D3968808754DE6811E /* Build configuration list for PBXNativeTarget "Discovery" */;
+			buildPhases = (
+				F517871CEF01E7BCE1012300AE80F117 /* Sources */,
+				31141AB913BFB99C13D4025AB3CDCB24 /* Frameworks */,
+				3C30AA0690436AE9D0166ABEBF08D723 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Discovery;
+			productName = Discovery;
+			productReference = 837DB8948572F0A1729EC4064E873B9E /* libDiscovery.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E7041718342C7564C7384737A390EB4F /* Pods-DiscoveryReact */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27685375DFF87116F5FB39FDB95EB4B4 /* Build configuration list for PBXNativeTarget "Pods-DiscoveryReact" */;
+			buildPhases = (
+				CCDDCD5B71CFEAAA01C35A517670967A /* Sources */,
+				AB26F75D17706D67334FCF55EF0535EB /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F45A1555EBBF9CD571F4CDBB18282A4F /* PBXTargetDependency */,
+			);
+			name = "Pods-DiscoveryReact";
+			productName = "Pods-DiscoveryReact";
+			productReference = 8F59A37A6385158732C9D7DD532240E8 /* libPods-DiscoveryReact.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 11D20AB05BB3375BD59B390AB5674AB9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A5D916D2B8C8B51883F4DF18694A1748 /* Discovery */,
+				E7041718342C7564C7384737A390EB4F /* Pods-DiscoveryReact */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CCDDCD5B71CFEAAA01C35A517670967A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16EFC600060DEE2D5FC31D2385E5318F /* Pods-DiscoveryReact-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F517871CEF01E7BCE1012300AE80F117 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC00984F27AE2AAC022DD05A1C54D55F /* BLEUser.m in Sources */,
+				2D2B570C2801CF2ACCABA0EA2F9F2014 /* Discovery-dummy.m in Sources */,
+				89DC5A10CE650BDDBE4222391457CD3A /* Discovery.m in Sources */,
+				93441883E11946255954D926ECA7CEF8 /* EasedValue.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F45A1555EBBF9CD571F4CDBB18282A4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Discovery;
+			target = A5D916D2B8C8B51883F4DF18694A1748 /* Discovery */;
+			targetProxy = F66AF912BCAE81E350227F048274A6B2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		052A17875CB827423D627183396CEB60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1A02586C59785608AB8A5B5652FB7284 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FF1C073CE3DAC11DA37E8A439F38F9C /* Discovery.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Discovery/Discovery-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		628550D3684ECD42E67464532C2D45BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D725634982BF1C744AB69DAC18782FCB /* Pods-DiscoveryReact.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B37F0F91F85060E28F1DAAB522DC7EC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		CD31A341EDCB7E03AED82A622CFDE067 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FF1C073CE3DAC11DA37E8A439F38F9C /* Discovery.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Discovery/Discovery-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		FF6BB32ABC48D64CE7E139327346D8E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED532CB191544403EEECF260E3EEDADD /* Pods-DiscoveryReact.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27685375DFF87116F5FB39FDB95EB4B4 /* Build configuration list for PBXNativeTarget "Pods-DiscoveryReact" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				628550D3684ECD42E67464532C2D45BE /* Debug */,
+				FF6BB32ABC48D64CE7E139327346D8E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B37F0F91F85060E28F1DAAB522DC7EC1 /* Debug */,
+				052A17875CB827423D627183396CEB60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A72EA6F4271FC1D3968808754DE6811E /* Build configuration list for PBXNativeTarget "Discovery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A02586C59785608AB8A5B5652FB7284 /* Debug */,
+				CD31A341EDCB7E03AED82A622CFDE067 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

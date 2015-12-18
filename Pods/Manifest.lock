@@ -1,0 +1,19 @@
+PODS:
+  - Discovery (1.1.0)
+
+DEPENDENCIES:
+  - Discovery (from `https://github.com/joshblour/Discovery`)
+
+EXTERNAL SOURCES:
+  Discovery:
+    :git: https://github.com/joshblour/Discovery
+
+CHECKOUT OPTIONS:
+  Discovery:
+    :commit: 00643fe28af24e2bd92d0cde7afe0adcdc5e7140
+    :git: https://github.com/joshblour/Discovery
+
+SPEC CHECKSUMS:
+  Discovery: ce383cbc2033c5cdf8fa2b739a28ba1d3fe11157
+
+COCOAPODS: 0.39.0
