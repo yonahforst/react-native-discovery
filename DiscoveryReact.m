@@ -2,13 +2,14 @@
 //  DiscoveryReact.m
 //  DiscoveryReact
 
+#import "DiscoveryReact.h"
 
 #import "RCTBridge.h"
 #import "RCTConvert.h"
 #import "RCTEventDispatcher.h"
+
 #import "Discovery.h"
 
-#import "DiscoveryReact.h"
 
 @interface DiscoveryReact()
 
@@ -32,11 +33,9 @@ RCT_EXPORT_MODULE()
  * The usersBlock is triggered periodically in order of users' proximity.
  * The startOptions determine if the beacon should start advertising, broadcasting, both, or none.
  */
-- (instancetype)initWithUUID:(NSString *)uuidString
+RCT_EXPORT_METHOD(initWithUUID:(NSString *)uuidString
                     username:(NSString *)username
-                startOption:(int)startOption {
-  self = [super init];
-  if(self) {
+                startOption:(int)startOption) {
       CBUUID *uuid = [CBUUID UUIDWithString:uuidString];
       self.discovery = [[Discovery alloc] initWithUUID: uuid
                                         username: username
@@ -45,9 +44,6 @@ RCT_EXPORT_MODULE()
                                             [self receivedUsers:users didChange:usersChanged];
                                         }];
 
-  }
-
-  return self;
 }
 
 
@@ -63,12 +59,12 @@ RCT_EXPORT_MODULE()
                             @"users": array,
                             @"didChange": @(usersChanged)
                         };
-    
+
     [self.bridge.eventDispatcher sendDeviceEventWithName:@"receivedUsers" body:event];
 }
 
 -(NSDictionary *)convertBLEUserToDict:(BLEUser *)bleUser{
-    
+
     NSDictionary *dict = @{
                            @"peripheralId":bleUser.peripheralId,
                            @"username":bleUser.username,
@@ -77,7 +73,7 @@ RCT_EXPORT_MODULE()
                            @"proximity":@(bleUser.proximity),
                            @"updateTime":@(bleUser.updateTime)
                         };
-    
+
     return dict;
 }
 
