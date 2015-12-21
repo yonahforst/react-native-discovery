@@ -30,23 +30,24 @@ RCT_EXPORT_MODULE()
 
 /**
  * Initialize the Discovery object with a UUID specific to your app, and a username specific to your device.
- * The usersBlock is triggered periodically in order of users' proximity.
- * The startOptions determine if the beacon should start advertising, broadcasting, both, or none.
  */
-RCT_EXPORT_METHOD(initWithUUID:(NSString *)uuidString
-                    username:(NSString *)username
-                startOption:(int)startOption) {
-      CBUUID *uuid = [CBUUID UUIDWithString:uuidString];
-      self.discovery = [[Discovery alloc] initWithUUID: uuid
-                                        username: username
-                                        startOption:(DIStartOptions)startOption
-                                        usersBlock:^(NSArray *users, BOOL usersChanged) {
-                                            [self receivedUsers:users didChange:usersChanged];
-                                        }];
+RCT_EXPORT_METHOD(initialize:(NSString *)uuidString username:(NSString *)username) {
+    CBUUID *uuid = [CBUUID UUIDWithString:uuidString];
+    self.discovery = [[Discovery alloc] initWithUUID: uuid
+                                            username: username
+                                         startOption:DIStartNone
+                                          usersBlock:^(NSArray *users, BOOL usersChanged) {
+                                              [self receivedUsers:users didChange:usersChanged];
+                                          }];
 
 }
 
-
+/**
+  * run on the main queue otherwise discovery timers dont work.
+*/
+- (dispatch_queue_t)methodQueue {
+  return dispatch_get_main_queue();
+}
 
 -(void)receivedUsers:(NSArray *)users didChange:(BOOL) usersChanged {
     NSMutableArray *array = [NSMutableArray array];
