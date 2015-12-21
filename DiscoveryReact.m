@@ -37,19 +37,22 @@ RCT_EXPORT_METHOD(initialize:(NSString *)uuidString username:(NSString *)usernam
                                             username: username
                                          startOption:DIStartNone
                                           usersBlock:^(NSArray *users, BOOL usersChanged) {
-                                              [self receivedUsers:users didChange:usersChanged];
+                                              [self discoveredUsers:users didChange:usersChanged];
                                           }];
 
 }
 
 /**
-  * run on the main queue otherwise discovery timers dont work.
-*/
+ * run on the main queue otherwise discovery timers dont work.
+ */
 - (dispatch_queue_t)methodQueue {
   return dispatch_get_main_queue();
 }
 
--(void)receivedUsers:(NSArray *)users didChange:(BOOL) usersChanged {
+
+
+
+-(void)discoveredUsers:(NSArray *)users didChange:(BOOL) usersChanged {
     NSMutableArray *array = [NSMutableArray array];
     for (BLEUser *user in users) {
         [array addObject:[self convertBLEUserToDict:user]];
@@ -61,7 +64,7 @@ RCT_EXPORT_METHOD(initialize:(NSString *)uuidString username:(NSString *)usernam
                             @"didChange": @(usersChanged)
                         };
 
-    [self.bridge.eventDispatcher sendDeviceEventWithName:@"receivedUsers" body:event];
+    [self.bridge.eventDispatcher sendDeviceEventWithName:@"discoveredUsers" body:event];
 }
 
 -(NSDictionary *)convertBLEUserToDict:(BLEUser *)bleUser{
