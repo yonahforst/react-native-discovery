@@ -9,7 +9,7 @@ React native implementation of https://github.com/omergul123/Discovery
 Discovery is a very simple but useful library for discovering nearby devices with BLE(Bluetooth Low Energy) and for exchanging a value (kind of ID or username determined by you on the running app on peer device) regardless of whether the app on peer device works at foreground or background state.
 
 
-###Example
+####Example
 ```java
 const Discovery = require('discovery-react');
 Discovery.initialize(
@@ -29,6 +29,26 @@ DeviceEventEmitter.addListener(
 );
 
 ```
+
+
+####API
+
+`initialize(uuidString, username)` - Initialize the Discovery object with a UUID specific to your app, and a username specific to your device.
+
+`setPaused(isPaused)` - bool. pauses advertising and detection
+
+`setShouldDiscover(shouldDiscover)` - bool. starts and stops discovery only
+
+`setShouldAdvertise(shouldAdvertise)` - bool. starts and stops advertising only
+
+`setUserTimeoutInterval(userTimeoutInterval)` - integer in seconds, default is 5. After not seeing a user for x seconds, we remove him from the users list in our callback.
+  
+  
+*The following two methods are specific to the Android version, since the Android docs advise against continuous scanning. Instead, we cycle scanning on and off. This also allows us to modify the scan behaviour when the app moves to the background.*
+
+`setScanForSeconds(scanForSeconds)` - integer in seconds, default is 5. This parameter specifies the duration of the ON part of the scan cycle.
+    
+`setWaitForSeconds(waitForSeconds)` - integer in seconds default is 5. This parameter specifies the duration of the OFF part of the scan cycle.
 
 
 ##Setup
