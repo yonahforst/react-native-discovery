@@ -1,6 +1,4 @@
-/**
- * Stub of DiscoveryReact for Android.
- *
+/** *
  * @providesModule DiscoveryReact
  * @flow
  */

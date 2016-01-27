@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/swiese/fbandroid-sdk/facebook/res/values-sv/strings.xml -->
+    <eat-comment/>
+    <string name="com_facebook_image_download_unknown_error">Oväntat fel vid hämtning av en bild.</string>
+    <string name="com_facebook_internet_permission_error_message">Webbinloggning kräver internetbehörighet</string>
+    <string name="com_facebook_internet_permission_error_title">AndroidManifest-fel</string>
+    <string name="com_facebook_like_button_liked">Gillade</string>
+    <string name="com_facebook_like_button_not_liked">Gilla</string>
+    <string name="com_facebook_loading">Laddar ...</string>
+    <string name="com_facebook_loginview_cancel_action">Avbryt</string>
+    <string name="com_facebook_loginview_log_in_button">Logga in</string>
+    <string name="com_facebook_loginview_log_in_button_long">Logga in med Facebook</string>
+    <string name="com_facebook_loginview_log_out_action">Logga ut</string>
+    <string name="com_facebook_loginview_log_out_button">Logga ut</string>
+    <string name="com_facebook_loginview_logged_in_as">Inloggad som: %1$s</string>
+    <string name="com_facebook_loginview_logged_in_using_facebook">Inloggad med Facebook</string>
+    <string name="com_facebook_send_button_text">Skicka</string>
+    <string name="com_facebook_share_button_text">Dela</string>
+    <string name="com_facebook_tooltip_default">Nyhet! Du bestämmer – välj vilken info du vill dela med appar.</string>
+    <!-- From: file:/Users/swiese/fbandroid-sdk/facebook/res/values-sv/messenger_button_strings.xml -->
+    <eat-comment/>
+    <string name="messenger_send_button_text">Skicka</string>
+</resources>

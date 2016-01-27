@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/swiese/fbandroid-sdk/facebook/res/values-th/strings.xml -->
+    <eat-comment/>
+    <string name="com_facebook_image_download_unknown_error">เกิดข้อผิดพลาดที่ไม่คาดคิดขณะดาวน์โหลดรูปภาพ</string>
+    <string name="com_facebook_internet_permission_error_message">การเข้าสู่ระบบ WebView จำเป็นต้องได้รับอนุญาตจากอินเทอร์เน็ต</string>
+    <string name="com_facebook_internet_permission_error_title">ข้อผิดพลาดของ AndroidManifest</string>
+    <string name="com_facebook_like_button_liked">ถูกใจแล้ว</string>
+    <string name="com_facebook_like_button_not_liked">ถูกใจ</string>
+    <string name="com_facebook_loading">กำลังโหลด...</string>
+    <string name="com_facebook_loginview_cancel_action">ยกเลิก</string>
+    <string name="com_facebook_loginview_log_in_button">เข้าสู่ระบบ</string>
+    <string name="com_facebook_loginview_log_in_button_long">เข้าสู่ระบบด้วย Facebook</string>
+    <string name="com_facebook_loginview_log_out_action">ออกจากระบบ</string>
+    <string name="com_facebook_loginview_log_out_button">ออกจากระบบ</string>
+    <string name="com_facebook_loginview_logged_in_as">เข้าสู่ระบบในชื่อ: %1$s</string>
+    <string name="com_facebook_loginview_logged_in_using_facebook">เข้าสู่ระบบโดยใช้ Facebook</string>
+    <string name="com_facebook_send_button_text">ส่ง</string>
+    <string name="com_facebook_share_button_text">แชร์</string>
+    <string name="com_facebook_tooltip_default">ใหม่! คุณเป็นฝ่ายควบคุม โปรดเลือกข้อมูลที่คุณต้องการแชร์ด้วยแอพ</string>
+    <!-- From: file:/Users/swiese/fbandroid-sdk/facebook/res/values-th/messenger_button_strings.xml -->
+    <eat-comment/>
+    <string name="messenger_send_button_text">ส่ง</string>
+</resources>

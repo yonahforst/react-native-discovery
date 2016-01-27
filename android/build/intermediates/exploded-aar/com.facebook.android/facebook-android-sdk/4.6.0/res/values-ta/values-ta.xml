@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/swiese/fbandroid-sdk/facebook/res/values-ta/strings.xml -->
+    <eat-comment/>
+    <string name="com_facebook_image_download_unknown_error">படத்தைப் பதிவிறக்கும் போது பிழை ஏற்பட்டது.</string>
+    <string name="com_facebook_internet_permission_error_message">WebView இல் உள்நுழைய இணைய அனுமதி தேவை</string>
+    <string name="com_facebook_internet_permission_error_title">AndroidManifest பிழை</string>
+    <string name="com_facebook_like_button_liked">விரும்பப்பட்டது</string>
+    <string name="com_facebook_like_button_not_liked">விருப்பம்</string>
+    <string name="com_facebook_loading">ஏற்றுகிறது...</string>
+    <string name="com_facebook_loginview_cancel_action">ரத்துசெய்</string>
+    <string name="com_facebook_loginview_log_in_button">உள்நுழைவு</string>
+    <string name="com_facebook_loginview_log_in_button_long">Facebook மூலம் உள்நுழையவும்</string>
+    <string name="com_facebook_loginview_log_out_action">வெளியேறு</string>
+    <string name="com_facebook_loginview_log_out_button">வெளியேறு</string>
+    <string name="com_facebook_loginview_logged_in_as">உள்நுழைந்துள்ள கணக்கு: %1$s</string>
+    <string name="com_facebook_loginview_logged_in_using_facebook">Facebook மூலம் உள்நுழையப்பட்டுள்ளது</string>
+    <string name="com_facebook_send_button_text">அனுப்பு</string>
+    <string name="com_facebook_share_button_text">பகிர்</string>
+    <string name="com_facebook_tooltip_default">புதிது! உங்கள் கட்டுப்பாட்டில் இருப்பதால், பயன்பாடுகளுடன் பகிர வேண்டிய தகவலைத் தேர்வுசெய்யவும்.</string>
+    <!-- From: file:/Users/swiese/fbandroid-sdk/facebook/res/values-ta/messenger_button_strings.xml -->
+    <eat-comment/>
+    <string name="messenger_send_button_text">அனுப்பு</string>
+</resources>

@@ -1,0 +1,2 @@
+//include ':discovery'
+//project(':discovery').projectDir = new File('../../../android/Discovery/discovery/')

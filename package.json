@@ -7,5 +7,5 @@
   },
   "license": "MIT",
   "keywords": ["react-native", "react-component", "ios", "ibeacon", "beacon", "dicovery"],
-  "main": "DiscoveryReact.ios.js"
+  "main": "DiscoveryReact"
 }

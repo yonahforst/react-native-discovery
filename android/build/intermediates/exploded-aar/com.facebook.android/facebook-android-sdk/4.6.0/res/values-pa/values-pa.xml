@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/swiese/fbandroid-sdk/facebook/res/values-pa/strings.xml -->
+    <eat-comment/>
+    <string name="com_facebook_image_download_unknown_error">ਕਿਸੇ ਤਸਵੀਰ ਨੂੰ ਡਾਉਨਲੋਡ ਕਰਨ ਵੇਲੇ ਅਗਿਆਤ ਤਰੁੱਟੀ ਹੋ ਗਈ।</string>
+    <string name="com_facebook_internet_permission_error_message">WebView ਲੌਗ ਨੂੰ ਇੰਟਰਨੈੱਟ ਅਨੁਮਤੀ ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ</string>
+    <string name="com_facebook_internet_permission_error_title">AndroidManifest ਤਰੁੱਟੀ</string>
+    <string name="com_facebook_like_button_liked">ਪਸੰਦ ਕੀਤਾ ਗਿਆ</string>
+    <string name="com_facebook_like_button_not_liked">ਪਸੰਦ ਕਰੋ</string>
+    <string name="com_facebook_loading">ਲੋਡ ਕਰ ਰਿਹਾ ਹੈ...</string>
+    <string name="com_facebook_loginview_cancel_action">ਰੱਦ ਕਰੋ</string>
+    <string name="com_facebook_loginview_log_in_button">ਲੌਗ ਇਨ ਕਰੋ</string>
+    <string name="com_facebook_loginview_log_in_button_long">Facebook ਦੇ ਨਾਲ ਲੌਗ ਇਨ ਕਰੋ</string>
+    <string name="com_facebook_loginview_log_out_action">ਲੌਗ ਆਉਟ ਕਰੋ</string>
+    <string name="com_facebook_loginview_log_out_button">ਲੌਗ ਆਉਟ ਕਰੋ</string>
+    <string name="com_facebook_loginview_logged_in_as">ਇਸ ਵੱਜੋਂ ਲੌਗ ਇਨ ਕੀਤਾ ਗਿਆ: %1$s</string>
+    <string name="com_facebook_loginview_logged_in_using_facebook">Facebook ਦਾ ਉਪਯੋਗ ਕਰਕੇ ਲੌਗ ਇਨ ਕੀਤਾ ਗਿਆ</string>
+    <string name="com_facebook_send_button_text">ਭੇਜੋ</string>
+    <string name="com_facebook_share_button_text">ਸਾਂਝਾ ਕਰੋ</string>
+    <string name="com_facebook_tooltip_default">ਨਵਾਂ! ਤੁ\ਸੀਂ ਨਿਯੰਤਰਣ ਵਿੱਚ ਹੋ - ਉਹ ਜਾਣਕਾਰੀ ਚੁਣੋ ਜੋ ਤੁਸੀਂ ਐਪਸ ਦੇ ਨਾਲ ਸਾਂਝੀ ਕਰਨੀ ਚਾਹੁੰਦੇ ਹੋ।</string>
+    <!-- From: file:/Users/swiese/fbandroid-sdk/facebook/res/values-pa/messenger_button_strings.xml -->
+    <eat-comment/>
+    <string name="messenger_send_button_text">ਭੇਜੋ</string>
+</resources>
