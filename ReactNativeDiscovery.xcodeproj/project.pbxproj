@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		13BE3DEE1AC21097009241FE /* ReactNativeDiscovery.m in Sources */ = {isa = PBXBuildFile; fileRef = 13BE3DED1AC21097009241FE /* ReactNativeDiscovery.m */; };
+		9D5DD1CC1C592E92005ED807 /* BLEUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D5DD1821C58EE58005ED807 /* BLEUser.m */; };
+		9D5DD1CD1C592E95005ED807 /* Discovery.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D5DD1841C58EE58005ED807 /* Discovery.m */; };
+		9D5DD1CE1C592E99005ED807 /* EasedValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D5DD1861C58EE58005ED807 /* EasedValue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,6 +59,7 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				9D5DD1801C58EE58005ED807 /* Discovery-iOS */,
 				13BE3DEC1AC21097009241FE /* ReactNativeDiscovery.h */,
 				13BE3DED1AC21097009241FE /* ReactNativeDiscovery.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
@@ -79,7 +83,6 @@
 		DBE8435F5D6005E43ED1E8E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9D5DD1801C58EE58005ED807 /* Discovery-iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -140,6 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D5DD1CE1C592E99005ED807 /* EasedValue.m in Sources */,
+				9D5DD1CD1C592E95005ED807 /* Discovery.m in Sources */,
+				9D5DD1CC1C592E92005ED807 /* BLEUser.m in Sources */,
 				13BE3DEE1AC21097009241FE /* ReactNativeDiscovery.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,7 +191,7 @@
 					"$(SRCROOT)/../../ios/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/**";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -224,7 +230,7 @@
 					"$(SRCROOT)/../../ios/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/**";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
