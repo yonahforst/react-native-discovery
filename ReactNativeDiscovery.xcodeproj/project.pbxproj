@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13BE3DEE1AC21097009241FE /* DiscoveryReact.m in Sources */ = {isa = PBXBuildFile; fileRef = 13BE3DED1AC21097009241FE /* DiscoveryReact.m */; };
+		13BE3DEE1AC21097009241FE /* ReactNativeDiscovery.m in Sources */ = {isa = PBXBuildFile; fileRef = 13BE3DED1AC21097009241FE /* ReactNativeDiscovery.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,9 +23,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		134814201AA4EA6300B7C361 /* libDiscoveryReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDiscoveryReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		13BE3DEC1AC21097009241FE /* DiscoveryReact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoveryReact.h; sourceTree = "<group>"; };
-		13BE3DED1AC21097009241FE /* DiscoveryReact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoveryReact.m; sourceTree = "<group>"; };
+		134814201AA4EA6300B7C361 /* libReactNativeDiscovery.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libReactNativeDiscovery.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		13BE3DEC1AC21097009241FE /* ReactNativeDiscovery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactNativeDiscovery.h; sourceTree = "<group>"; };
+		13BE3DED1AC21097009241FE /* ReactNativeDiscovery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReactNativeDiscovery.m; sourceTree = "<group>"; };
+		9D5DD1811C58EE58005ED807 /* BLEUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLEUser.h; sourceTree = "<group>"; };
+		9D5DD1821C58EE58005ED807 /* BLEUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLEUser.m; sourceTree = "<group>"; };
+		9D5DD1831C58EE58005ED807 /* Discovery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Discovery.h; sourceTree = "<group>"; };
+		9D5DD1841C58EE58005ED807 /* Discovery.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Discovery.m; sourceTree = "<group>"; };
+		9D5DD1851C58EE58005ED807 /* EasedValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasedValue.h; sourceTree = "<group>"; };
+		9D5DD1861C58EE58005ED807 /* EasedValue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EasedValue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +48,7 @@
 		134814211AA4EA7D00B7C361 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				134814201AA4EA6300B7C361 /* libDiscoveryReact.a */,
+				134814201AA4EA6300B7C361 /* libReactNativeDiscovery.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -50,16 +56,30 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				13BE3DEC1AC21097009241FE /* DiscoveryReact.h */,
-				13BE3DED1AC21097009241FE /* DiscoveryReact.m */,
+				13BE3DEC1AC21097009241FE /* ReactNativeDiscovery.h */,
+				13BE3DED1AC21097009241FE /* ReactNativeDiscovery.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
 				DBE8435F5D6005E43ED1E8E5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
+		9D5DD1801C58EE58005ED807 /* Discovery-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9D5DD1811C58EE58005ED807 /* BLEUser.h */,
+				9D5DD1821C58EE58005ED807 /* BLEUser.m */,
+				9D5DD1831C58EE58005ED807 /* Discovery.h */,
+				9D5DD1841C58EE58005ED807 /* Discovery.m */,
+				9D5DD1851C58EE58005ED807 /* EasedValue.h */,
+				9D5DD1861C58EE58005ED807 /* EasedValue.m */,
+			);
+			path = "Discovery-iOS";
+			sourceTree = "<group>";
+		};
 		DBE8435F5D6005E43ED1E8E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9D5DD1801C58EE58005ED807 /* Discovery-iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -67,9 +87,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		58B511DA1A9E6C8500147676 /* DiscoveryReact */ = {
+		58B511DA1A9E6C8500147676 /* ReactNativeDiscovery */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "DiscoveryReact" */;
+			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "ReactNativeDiscovery" */;
 			buildPhases = (
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
@@ -79,9 +99,9 @@
 			);
 			dependencies = (
 			);
-			name = DiscoveryReact;
+			name = ReactNativeDiscovery;
 			productName = RCTDataManager;
-			productReference = 134814201AA4EA6300B7C361 /* libDiscoveryReact.a */;
+			productReference = 134814201AA4EA6300B7C361 /* libReactNativeDiscovery.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -98,7 +118,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "DiscoveryReact" */;
+			buildConfigurationList = 58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "ReactNativeDiscovery" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -110,7 +130,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				58B511DA1A9E6C8500147676 /* DiscoveryReact */,
+				58B511DA1A9E6C8500147676 /* ReactNativeDiscovery */,
 			);
 		};
 /* End PBXProject section */
@@ -120,7 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13BE3DEE1AC21097009241FE /* DiscoveryReact.m in Sources */,
+				13BE3DEE1AC21097009241FE /* ReactNativeDiscovery.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,7 +249,7 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				PRODUCT_NAME = DiscoveryReact;
+				PRODUCT_NAME = ReactNativeDiscovery;
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
@@ -253,7 +273,7 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				PRODUCT_NAME = DiscoveryReact;
+				PRODUCT_NAME = ReactNativeDiscovery;
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
@@ -262,7 +282,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "DiscoveryReact" */ = {
+		58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "ReactNativeDiscovery" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				58B511ED1A9E6C8500147676 /* Debug */,
@@ -271,7 +291,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "DiscoveryReact" */ = {
+		58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "ReactNativeDiscovery" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				58B511F01A9E6C8500147676 /* Debug */,

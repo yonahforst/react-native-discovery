@@ -8,6 +8,6 @@
 
 #import "RCTBridgeModule.h"
 
-@interface DiscoveryReact : NSObject <RCTBridgeModule>
+@interface ReactNativeDiscovery : NSObject <RCTBridgeModule>
 
 @end

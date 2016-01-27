@@ -2,7 +2,7 @@
 //  DiscoveryReact.m
 //  DiscoveryReact
 
-#import "DiscoveryReact.h"
+#import "ReactNativeDiscovery.h"
 
 #import "RCTBridge.h"
 #import "RCTConvert.h"
@@ -11,13 +11,13 @@
 #import "Discovery.h"
 
 
-@interface DiscoveryReact()
+@interface ReactNativeDiscovery()
 
 @property (strong, nonatomic) Discovery *discovery;
 
 @end
 
-@implementation DiscoveryReact
+@implementation ReactNativeDiscovery
 
 RCT_EXPORT_MODULE()
 
