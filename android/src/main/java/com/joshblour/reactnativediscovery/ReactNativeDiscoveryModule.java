@@ -1,4 +1,4 @@
-package com.yonahforst.discoveryreact;
+package com.joshblour.reactnativediscovery;
 
 import android.app.Activity;
 import android.app.Application;
@@ -29,20 +29,20 @@ import java.util.Locale;
 import java.util.TimeZone;
 
 
-public class DiscoveryReactModule extends ReactContextBaseJavaModule implements Discovery.DiscoveryCallback, Application.ActivityLifecycleCallbacks {
+public class ReactNativeDiscoveryModule extends ReactContextBaseJavaModule implements Discovery.DiscoveryCallback, Application.ActivityLifecycleCallbacks {
 
     private static Discovery mDiscovery;
     private static ParcelUuid mDiscoveryUUID;
     private static Activity mActivity;
 
-    public DiscoveryReactModule(ReactApplicationContext reactContext, Activity activity) {
+    public ReactNativeDiscoveryModule(ReactApplicationContext reactContext, Activity activity) {
         super(reactContext);
         mActivity = activity;
     }
 
     @Override
     public String getName() {
-        return "DiscoveryReact";
+        return "ReactNativeDiscovery";
     }
 
 
