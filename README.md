@@ -11,7 +11,9 @@ Discovery is a very simple but useful library for discovering nearby devices wit
 
 ####Example
 ```java
+import { DeviceEventEmitter } from 'react-native';
 const Discovery = require('discovery-react');
+
 Discovery.initialize(
   "3E1180E5-222E-43E9-98B4-E6C0DD18E728",
   "SpacemanSpiff"
