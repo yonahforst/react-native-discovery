@@ -12,7 +12,7 @@ Discovery is a very simple but useful library for discovering nearby devices wit
 ####Example
 ```java
 const {DeviceEventEmitter} = require('react-native');
-const Discovery = require('discovery-react');
+const Discovery = require('react-native-discovery');
 
 Discovery.initialize(
   "3E1180E5-222E-43E9-98B4-E6C0DD18E728",
@@ -87,7 +87,7 @@ dependencies {
 #####Step 3 - Register React Package
 ```
 ...
-import com.joshblour.reactnativediscovery.ReactNativeDiscovery; // <--- import
+import com.joshblour.reactnativediscovery.ReactNativeDiscoveryPackage; // <--- import
 
 public class MainActivity extends ReactActivity {
 
@@ -97,7 +97,7 @@ public class MainActivity extends ReactActivity {
     protected List<ReactPackage> getPackages() {
         return Arrays.<ReactPackage>asList(
             new MainReactPackage(),
-            new ReactNativeDiscovery(this) // <------ add the package
+            new ReactNativeDiscoveryPackage(this) // <------ add the package
         );
     }
 
