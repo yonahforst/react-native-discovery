@@ -37,6 +37,15 @@ DeviceEventEmitter.addListener(
   }
 );
 
+// Listen for bluetooth state changes
+DeviceEventEmitter.addListener(
+  'bleStateChanged',
+  (event) => {
+    console.log('BLE is On: ' + event.isOn)
+  }
+);
+
+
 ```
 
 
