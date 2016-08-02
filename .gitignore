@@ -1,0 +1,5 @@
+android/.gradle
+android/.idea
+android/.idea/*
+android/build
+android/gradle
