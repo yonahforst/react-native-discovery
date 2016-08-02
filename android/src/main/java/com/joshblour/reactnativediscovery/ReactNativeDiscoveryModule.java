@@ -2,15 +2,20 @@ package com.joshblour.reactnativediscovery;
 
 import android.app.Activity;
 import android.app.Application;
+import android.bluetooth.BluetoothAdapter;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.ParcelUuid;
 import android.util.Log;
 
 
 import com.facebook.react.bridge.Arguments;
+import com.facebook.react.bridge.LifecycleEventListener;
 import com.facebook.react.bridge.NativeModule;
+import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
@@ -29,15 +34,25 @@ import java.util.Locale;
 import java.util.TimeZone;
 
 
-public class ReactNativeDiscoveryModule extends ReactContextBaseJavaModule implements Discovery.DiscoveryCallback, Application.ActivityLifecycleCallbacks {
+public class ReactNativeDiscoveryModule extends ReactContextBaseJavaModule implements Discovery.DiscoveryCallback, LifecycleEventListener {
 
     private static Discovery mDiscovery;
     private static ParcelUuid mDiscoveryUUID;
-    private static Activity mActivity;
+    private int mScanForSeconds;
+    private int mWaitForSeconds;
 
-    public ReactNativeDiscoveryModule(ReactApplicationContext reactContext, Activity activity) {
+    private final BroadcastReceiver mBleStateReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (intent.getAction().equals(BluetoothAdapter.ACTION_STATE_CHANGED)) {
+                handleStateChange(intent.getIntExtra(BluetoothAdapter.EXTRA_STATE, BluetoothAdapter.ERROR));
+            }
+        }
+    };
+
+
+    public ReactNativeDiscoveryModule(ReactApplicationContext reactContext) {
         super(reactContext);
-        mActivity = activity;
     }
 
     @Override
@@ -50,14 +65,43 @@ public class ReactNativeDiscoveryModule extends ReactContextBaseJavaModule imple
      * Initialize the Discovery object with a UUID specific to your app, and a username specific to your device.
      */
     @ReactMethod
-    public void initialize(String uuid, String username) {
+    public void initialize(String uuid, String username, Promise promise) {
+        // Register for broadcasts on BluetoothAdapter state change
+        IntentFilter filter = new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED);
+        getReactApplicationContext().registerReceiver(mBleStateReceiver, filter);
+
         mDiscoveryUUID = ParcelUuid.fromString(uuid);
         mDiscovery =  new Discovery(getReactApplicationContext(), mDiscoveryUUID, username, Discovery.DIStartOptions.DIStartNone, this);
-        this.mActivity.getApplication().registerActivityLifecycleCallbacks(this);
+
+        getReactApplicationContext().addLifecycleEventListener(this);
+
+        if (BluetoothAdapter.getDefaultAdapter() != null) {
+            handleStateChange(BluetoothAdapter.getDefaultAdapter().getState());
+        }
+        promise.resolve(uuid);
     }
 
 
+    public void handleStateChange(int state) {
+        WritableMap params = Arguments.createMap();
 
+        switch (state) {
+            case BluetoothAdapter.STATE_OFF:
+                params.putBoolean("isOn", false);
+                break;
+
+            case BluetoothAdapter.STATE_ON:
+                params.putBoolean("isOn", true);
+                break;
+
+        }
+
+        if (params.hasKey("isOn")) {
+            getReactApplicationContext()
+                    .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
+                    .emit("bleStateChanged", params);
+        }
+    }
 
     @Override
     public void didUpdateUsers(ArrayList<BLEUser> users, Boolean usersChanged) {
@@ -90,19 +134,6 @@ public class ReactNativeDiscoveryModule extends ReactContextBaseJavaModule imple
         return params;
     }
 
-//
-//
-////commented because i dont know how to return values for exported methods
-/////**
-//// * Returns the user user from our user dictionary according to its peripheralId.
-//// */
-////RCT_EXPORT_METHOD(userWithPeripheralId:(NSString *)peripheralId) {
-////    BLEUser *user = [self.discovery userWithPeripheralId:peripheralId];
-////    return [self convertBLEUserToDict:user];
-////}
-//
-//
-
 
     /**
      * Changing these properties will start/stop advertising/discovery
@@ -126,24 +157,16 @@ public class ReactNativeDiscoveryModule extends ReactContextBaseJavaModule imple
         mDiscovery.setUserTimeoutInterval(userTimeoutInterval);
     }
 
-
-//    THIS DOESNT EXIST FOR ANDROID. ONLY IOS
-//    /*
-//        * Update interval is the interval that your usersBlock gets triggered.
-//        */
-//        RCT_EXPORT_METHOD(setUpdateInterval:(int)updateInterval)
-//        {
-//            [self.discovery setUpdateInterval:updateInterval];
-//    }
-
     @ReactMethod
     public void setScanForSeconds(int scanForSeconds) {
-        mDiscovery.setScanForSeconds(scanForSeconds);
+        mScanForSeconds = scanForSeconds;
+        mDiscovery.setScanForSeconds(mScanForSeconds);
     }
 
     @ReactMethod
     public void setWaitForSeconds(int waitForSeconds) {
-        mDiscovery.setWaitForSeconds(waitForSeconds);
+        mWaitForSeconds = waitForSeconds;
+        mDiscovery.setWaitForSeconds(mWaitForSeconds);
     }
 
     /**
@@ -155,6 +178,23 @@ public class ReactNativeDiscoveryModule extends ReactContextBaseJavaModule imple
     }
 
 
+    @Override
+    public void onHostResume() {
+        mDiscovery.setWaitForSeconds(mWaitForSeconds);
+    }
+
+    @Override
+    public void onHostPause() {
+        mDiscovery.setWaitForSeconds(mWaitForSeconds * 6);
+    }
+
+    @Override
+    public void onHostDestroy() {
+        Log.e("TAG", "ACTIVITY DESTROYED");
+        mDiscovery.setShouldAdvertise(false);
+        mDiscovery.setShouldDiscover(false);
+        getReactApplicationContext().unregisterReceiver(mBleStateReceiver);
+    }
     /**
      * Return an ISO 8601 combined date and time string for specified date/time
      *
@@ -166,36 +206,5 @@ public class ReactNativeDiscoveryModule extends ReactContextBaseJavaModule imple
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.US);
         dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
         return dateFormat.format(date);
-    }
-
-    @Override
-    public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
-    }
-
-    @Override
-    public void onActivityStarted(Activity activity) {
-    }
-
-    @Override
-    public void onActivityResumed(Activity activity) {
-    }
-
-    @Override
-    public void onActivityPaused(Activity activity) {
-    }
-
-    @Override
-    public void onActivityStopped(Activity activity) {
-    }
-
-    @Override
-    public void onActivitySaveInstanceState(Activity activity, Bundle outState) {
-    }
-
-    @Override
-    public void onActivityDestroyed(Activity activity) {
-        Log.e("TAG", "ACTIVITY DESTROYED");
-        mDiscovery.setShouldAdvertise(false);
-        mDiscovery.setShouldDiscover(false);
     }
 }
