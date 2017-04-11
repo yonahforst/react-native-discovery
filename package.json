@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "git@github.com:danielsundman/react-native-discovery.git"
+    "url": "https://github.com/danielsundman/react-native-discovery.git"
   },
   "license": "MIT",
   "keywords": ["react-native", "react-component", "ios", "ibeacon", "beacon", "dicovery"],
