@@ -4,9 +4,9 @@
 
 #import "ReactNativeDiscovery.h"
 
-#import "RCTBridge.h"
-#import "RCTConvert.h"
-#import "RCTEventDispatcher.h"
+#import <React/RCTBridge.h>
+#import <React/RCTConvert.h>
+#import <React/RCTEventDispatcher.h>
 
 #import "Discovery.h"
 
@@ -36,33 +36,33 @@ RCT_REMAP_METHOD(initialize, initialize:(NSString *)uuidString username:(NSStrin
 {
     if (self.bleStateObserver == nil) {
         self.bleStateObserver = [[NSNotificationCenter defaultCenter] addObserverForName:kBluetoothStateNotificationKey object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
-            
+
             NSInteger centralState = [(NSNumber *)note.userInfo[kBluetoothCentralStateKey] integerValue];
             BOOL isOn = centralState == CBCentralManagerStatePoweredOn;
             NSDictionary *event = @{ @"isOn" : @(isOn)};
             [self.bridge.eventDispatcher sendDeviceEventWithName:@"bleStateChanged" body:event];
         }];
     }
-    
+
     if (self.discoveryDict == nil) {
         self.discoveryDict = [NSMutableDictionary dictionary];
     }
-    
+
     Discovery *discovery = [self.discoveryDict objectForKey:uuidString];
     if (discovery != nil) {
         [discovery setShouldDiscover: NO];
         [discovery setShouldAdvertise: NO];
         [self.discoveryDict removeObjectForKey:uuidString];
     }
-    
-    
+
+
     discovery = [[Discovery alloc] initWithUUID: [CBUUID UUIDWithString:uuidString]
                                        username: username
                                     startOption:DIStartNone
                                      usersBlock:^(NSArray *users, BOOL usersChanged) {
                                          [self discovery:uuidString discoveredUsers:users didChange:usersChanged];
                                      }];
-    
+
     [self.discoveryDict setObject:discovery forKey:uuidString];
     resolve(uuidString);
 }
@@ -80,18 +80,18 @@ RCT_REMAP_METHOD(initialize, initialize:(NSString *)uuidString username:(NSStrin
     for (BLEUser *user in users) {
         [array addObject:[self convertBLEUserToDict:user]];
     }
-    
+
     NSDictionary *event = @{
                             @"uuid": uuidString,
                             @"users": array,
                             @"didChange": @(usersChanged)
                             };
-    
+
     [self.bridge.eventDispatcher sendDeviceEventWithName:@"discoveredUsers" body:event];
 }
 
 -(NSDictionary *)convertBLEUserToDict:(BLEUser *)bleUser{
-    
+
     NSDictionary *dict = @{
                            @"peripheralId":bleUser.peripheralId,
                            @"username":bleUser.username,
@@ -100,7 +100,7 @@ RCT_REMAP_METHOD(initialize, initialize:(NSString *)uuidString username:(NSStrin
                            @"proximity":@(bleUser.proximity),
                            @"updateTime":@(bleUser.updateTime)
                            };
-    
+
     return dict;
 }
 
@@ -132,7 +132,7 @@ RCT_REMAP_METHOD(setShouldAdvertise, setShouldAdvertise:(NSString *)uuidString s
     } else {
         reject(@"not_initialized", [NSString stringWithFormat:@"UUID %@ not initialized", uuidString], [NSError errorWithDomain:@"ReactNativeDiscovery" code:0 userInfo:nil]);
     }
-    
+
 }
 
 RCT_REMAP_METHOD(setShouldDiscover, setShouldDiscover:(NSString *)uuidString shouldDiscover:(BOOL)shouldDiscover resolve:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)

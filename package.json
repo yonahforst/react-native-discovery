@@ -7,6 +7,6 @@
   },
   "license": "MIT",
   "keywords": ["react-native", "react-component", "ios", "ibeacon", "beacon", "dicovery"],
-  "main": "index.js",
+  "main": "ReactNativeDiscovery",
   "author": "Yonah Forst <yonaforst@hotmail.com>"
 }
